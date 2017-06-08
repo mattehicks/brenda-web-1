@@ -47,7 +47,7 @@ describe('JobSetupCtrl', function() {
 	});
 	
 	it('should initialize template, start and end frame', function() {
-		expect($rootScope.workTemplate).toBe('blender -b *.blend -F PNG -o $OUTDIR/frame_###### -s $START -e $END -j $STEP -t 0 -a');
+		expect($rootScope.workTemplate).toBe('blender -b *.blend --python bakegroups.py -- -items $START');
 		expect($rootScope.startFrame).toBe(1);
 		expect($rootScope.endFrame).toBe(240);
 	});
