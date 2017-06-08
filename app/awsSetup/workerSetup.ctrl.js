@@ -127,7 +127,7 @@ angular.module('awsSetup')
 		}
 		
 		script += 'sudo apt-get update\n' +
-				'sudo apt-get -y install nginx\n' +
+				'sudo yum -y install nginx\n' +
 				"sudo sed -i '29 i\\ add_header 'Access-Control-Allow-Origin' '*';' /etc/nginx/sites-enabled/default\n" +
 				'sudo echo "* * * * * root tail -n1000 /mnt/brenda/log > ' + $scope.amiNginxPath + 'log_tail.txt" >> /etc/crontab\n' +
 				'sudo echo "* * * * * root cat /proc/uptime /proc/loadavg $B/task_count > ' + $scope.amiNginxPath + 'uptime.txt" >> /etc/crontab\n' +
