@@ -24,7 +24,7 @@
 	template is:
 </p>
 <p>
-	<code>blender -b *.blend -F PNG -o $OUTDIR/frame_###### -s $START -e $END -j $STEP -t 0 -a</code>
+	<code>blender -b *.blend --python bakegroups.py -- -items $START</code>
 </p>
 <p>
 	This template tells the workers to render each frame of the project as a single task.  The start and end frame

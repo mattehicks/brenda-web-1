@@ -56,7 +56,7 @@ describe('JobSetupCtrl', function() {
 		it('should generate the work list', function() {
 			var workList = $rootScope.workList();
 			
-			expect(workList.length).toBe(240);
+			expect(workList.length).toBe(2);
 			expect(workList[0]).toBe('blender -b *.blend -F PNG -o $OUTDIR/frame_###### -s 1 -e 1 -j 1 -t 0 -a');
 			expect(workList[1]).toBe('blender -b *.blend -F PNG -o $OUTDIR/frame_###### -s 2 -e 2 -j 1 -t 0 -a');
 		});
