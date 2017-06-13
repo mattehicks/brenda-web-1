@@ -49,7 +49,7 @@ describe('JobSetupCtrl', function() {
 	it('should initialize template, start and end frame', function() {
 		expect($rootScope.workTemplate).toBe('blender -b *.blend --python bakegroups.py -- -items $START');
 		expect($rootScope.startFrame).toBe(1);
-		expect($rootScope.endFrame).toBe(240);
+		expect($rootScope.endFrame).toBe(10);
 	});
 	
 	describe('$scope.workList', function() {

@@ -23,7 +23,7 @@ angular.module('awsSetup')
 	//$scope.workTemplate = 'blender -b *.blend -F PNG -o $OUTDIR/frame_###### -s $START -e $END -j $STEP -t 0 -a';
 	$scope.workTemplate = 'blender -b *.blend --python bakegroups.py -- -items $START';
 	$scope.startFrame = 1;
-	$scope.endFrame = 240;
+	$scope.endFrame = 10;
 	
 	$scope.shuffle = Boolean(localStorageService.get('shuffleQ'));
 	
