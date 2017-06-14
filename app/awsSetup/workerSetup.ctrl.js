@@ -126,7 +126,7 @@ angular.module('awsSetup')
 			script += 'sudo ln /dev/xvdf /dev/xvdf1\n' 
 		}
 		
-		script += 'sudo apt-get update\n' +
+		script += 'sudo yum update\n' +
 				'sudo yum -y install nginx\n' +
 				"sudo sed -i '29 i\\ add_header 'Access-Control-Allow-Origin' '*';' /etc/nginx/sites-enabled/default\n" +
 				'sudo echo "* * * * * root tail -n1000 /mnt/brenda/log > ' + $scope.amiNginxPath + 'log_tail.txt" >> /etc/crontab\n' +
