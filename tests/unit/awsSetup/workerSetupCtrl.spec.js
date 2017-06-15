@@ -18,13 +18,13 @@ describe('WorkerSetupCtrl', function() {
 		amiListHandler = $httpBackend.when('GET', 'amiList.json').respond({
 			"amis": [
 			 		{
-			 			"ami": "ami-0529086c",
+			 			"ami": "ami-9597b183",
 			 			"blenderVersion": "2.69",
 			 			"nginxPath": "/usr/share/nginx/www/"
 			 		},
 			 		{
 			 			"ami": "ami-test",
-			 			"blenderVersion": "2.77"
+			 			"blenderVersion": "2.78"
 			 		}
 			 	],
 			 	"defaultNginxPath": "/usr/share/nginx/html/" 
