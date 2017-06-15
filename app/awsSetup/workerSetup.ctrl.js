@@ -147,7 +147,6 @@ angular.module('awsSetup')
 				'BLENDER_PROJECT=' + $scope.s3.projectSource + '\n' +
 				'WORK_QUEUE=sqs://' + $scope.queue.workQueue.split('/').pop() + '\n' +
 				'RENDER_OUTPUT=' + $scope.s3.frameDestination + '\n' +
-				'DONE=shutdown\n' +
 				'EOF\n';
 		
 		return script;
