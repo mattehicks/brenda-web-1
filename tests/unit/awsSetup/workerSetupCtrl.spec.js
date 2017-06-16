@@ -18,7 +18,7 @@ describe('WorkerSetupCtrl', function() {
 		amiListHandler = $httpBackend.when('GET', 'amiList.json').respond({
 			"amis": [
 			 		{
-			 			"ami": "ami-1dbf9e0b",
+			 			"ami": "ami-f67252e0",
 			 			"blenderVersion": "2.69",
 			 			"nginxPath": "/usr/share/nginx/www/"
 			 		},
