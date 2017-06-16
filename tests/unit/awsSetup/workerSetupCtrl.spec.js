@@ -18,7 +18,7 @@ describe('WorkerSetupCtrl', function() {
 		amiListHandler = $httpBackend.when('GET', 'amiList.json').respond({
 			"amis": [
 			 		{
-			 			"ami": "ami-9597b183",
+			 			"ami": "ami-1dbf9e0b",
 			 			"blenderVersion": "2.69",
 			 			"nginxPath": "/usr/share/nginx/www/"
 			 		},
@@ -159,6 +159,7 @@ describe('WorkerSetupCtrl', function() {
 				'    sudo ln -s "$B/$f" "/usr/share/nginx/html/$f"\n' +
 				'  done\n' +
 				'fi\n' +
+				'cp /home/ubuntu/bakegroups.py /mnt/brenda/brenda-project.tmp/' +
 				'sudo service nginx restart\n' +
 				'export BRENDA_WORK_DIR="."\n' +
 				'mkdir -p "$B"\n' +
