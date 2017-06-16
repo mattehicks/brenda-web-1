@@ -159,11 +159,11 @@ describe('WorkerSetupCtrl', function() {
 				'    sudo ln -s "$B/$f" "/usr/share/nginx/html/$f"\n' +
 				'  done\n' +
 				'fi\n' +
-				'sudo cp /home/ubuntu/bakegroups.py /mnt/brenda/brenda-project.tmp/\n' +
 				'sudo service nginx restart\n' +
 				'export BRENDA_WORK_DIR="."\n' +
 				'mkdir -p "$B"\n' +
 				'cd "$B"\n' +
+				'sudo cp /home/ubuntu/bakegroups.py /mnt/brenda/brenda-project.tmp/\n' +
 				'/usr/local/bin/brenda-node --daemon <<EOF\n' +
 				'AWS_ACCESS_KEY=accessKey\n' +
 				'AWS_SECRET_KEY=secretKey\n' +

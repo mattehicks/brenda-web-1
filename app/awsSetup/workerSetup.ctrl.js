@@ -138,17 +138,18 @@ angular.module('awsSetup')
 				'    sudo ln -s "$B/$f" "' + $scope.amiNginxPath + '$f"\n' +
 				'  done\n' +
 				'fi\n' +
-				'sudo cp "/home/ubuntu/bakegroups.py" "/mnt/brenda/brenda-project.tmp/"\n' +
 				'sudo service nginx restart\n' +
 				'export BRENDA_WORK_DIR="."\n' +
 				'mkdir -p "$B"\n' +
 				'cd "$B"\n' +
+				'sudo cp /home/ubuntu/bakegroups.py /mnt/brenda/brenda-project.tmp/\n' +
 				'/usr/local/bin/brenda-node --daemon <<EOF\n' +
 				'AWS_ACCESS_KEY=' + awsService.getKeyId() + '\n' +
 				'AWS_SECRET_KEY=' + awsService.getKeySecret() + '\n' +
 				'BLENDER_PROJECT=' + $scope.s3.projectSource + '\n' +
 				'WORK_QUEUE=sqs://' + $scope.queue.workQueue.split('/').pop() + '\n' +
 				'RENDER_OUTPUT=' + $scope.s3.frameDestination + '\n' +
+				'DONE=shutdown\n' +
 				'EOF\n';
 		
 		return script;
