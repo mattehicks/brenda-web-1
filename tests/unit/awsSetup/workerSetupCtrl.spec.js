@@ -159,8 +159,7 @@ describe('WorkerSetupCtrl', function() {
 				'    sudo ln -s "$B/$f" "/usr/share/nginx/html/$f"\n' +
 				'  done\n' +
 				'fi\n' +
-				'cp /home/ubuntu/bakegroups.py /mnt/brenda/brenda-project.tmp/' +
-				' ' +
+				'cp /home/ubuntu/bakegroups.py /mnt/brenda/brenda-project.tmp/\n' +
 				'sudo service nginx restart\n' +
 				'export BRENDA_WORK_DIR="."\n' +
 				'mkdir -p "$B"\n' +

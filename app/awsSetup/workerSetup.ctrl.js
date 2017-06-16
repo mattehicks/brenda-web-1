@@ -139,7 +139,6 @@ angular.module('awsSetup')
 				'  done\n' +
 				'fi\n' +
 				'cp /home/ubuntu/bakegroups.py /mnt/brenda/brenda-project.tmp/' +
-				+ '' +
 				'sudo service nginx restart\n' +
 				'export BRENDA_WORK_DIR="."\n' +
 				'mkdir -p "$B"\n' +
