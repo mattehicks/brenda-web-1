@@ -21,7 +21,7 @@ angular.module('awsSetup')
 	$scope.queueSize = 'No Queue Selected';
 	
 	//$scope.workTemplate = 'blender -b *.blend -F PNG -o $OUTDIR/frame_###### -s $START -e $END -j $STEP -t 0 -a';
-	$scope.workTemplate = 'blender -b *.blend --python /home/ubuntu/bakegroups.py -- -items $START';
+	$scope.workTemplate = 'blender -b *.blend -noaudio --python bakegroups.py -- -items $START';
 	$scope.startFrame = 1;
 	$scope.endFrame = 10;
 	
