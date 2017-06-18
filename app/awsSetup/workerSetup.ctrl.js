@@ -100,6 +100,7 @@ angular.module('awsSetup')
 	
 	$scope.numInstances = 1;
 	
+	//random fix.
 	//Get EC2 keypairs to choose from
 	$scope.keys = [];
 	
