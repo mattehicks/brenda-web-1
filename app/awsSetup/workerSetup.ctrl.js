@@ -132,7 +132,6 @@ angular.module('awsSetup')
 				"sudo sed -i '29 i\\ add_header 'Access-Control-Allow-Origin' '*';' /etc/nginx/sites-enabled/default\n" +
 				'sudo echo "* * * * * root tail -n1000 /mnt/brenda/log > ' + $scope.amiNginxPath + 'log_tail.txt" >> /etc/crontab\n' +
 				'sudo echo "* * * * * root cat /proc/uptime /proc/loadavg $B/task_count > ' + $scope.amiNginxPath + 'uptime.txt" >> /etc/crontab\n' +
-				'sudo cp /bakegroups.py /mnt/brenda/' +
 				'if ! [ -d "$B" ]; then\n' +
 				'  for f in brenda.pid log task_count task_last DONE ; do\n' +
 				'    ln -s "$B/$f" "/root/$f"\n' +
@@ -143,6 +142,8 @@ angular.module('awsSetup')
 				'export BRENDA_WORK_DIR="."\n' +
 				'mkdir -p "$B"\n' +
 				'cd "$B"\n' +
+				'sudo cp /bakegroups.py /mnt/brenda/\n' +
+				'sudo cp /bakegroups.py /mnt/brenda/brenda-project.tmp/\n' +
 				'/usr/local/bin/brenda-node --daemon <<EOF\n' +
 				'AWS_ACCESS_KEY=' + awsService.getKeyId() + '\n' +
 				'AWS_SECRET_KEY=' + awsService.getKeySecret() + '\n' +
