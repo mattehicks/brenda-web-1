@@ -132,6 +132,7 @@ angular.module('awsSetup')
 				"sudo sed -i '29 i\\ add_header 'Access-Control-Allow-Origin' '*';' /etc/nginx/sites-enabled/default\n" +
 				'sudo echo "* * * * * root tail -n1000 /mnt/brenda/log > ' + $scope.amiNginxPath + 'log_tail.txt" >> /etc/crontab\n' +
 				'sudo echo "* * * * * root cat /proc/uptime /proc/loadavg $B/task_count > ' + $scope.amiNginxPath + 'uptime.txt" >> /etc/crontab\n' +
+				'sudo cp /bakegroups.py /mnt/brenda/' +
 				'if ! [ -d "$B" ]; then\n' +
 				'  for f in brenda.pid log task_count task_last DONE ; do\n' +
 				'    ln -s "$B/$f" "/root/$f"\n' +
