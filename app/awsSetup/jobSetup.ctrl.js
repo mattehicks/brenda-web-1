@@ -30,7 +30,7 @@ angular.module('awsSetup')
 	
 	$scope.$watch('shuffle', function(value) {
 		//localStorageService.set('shuffleQ', value);
-		localStorageService.set('shuffleQ', 0);
+		localStorageService.set('shuffleQ', false);
 	});
 	
 	awsService.getQueues();
