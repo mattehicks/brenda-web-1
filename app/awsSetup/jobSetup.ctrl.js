@@ -28,9 +28,9 @@ angular.module('awsSetup')
 	//$scope.shuffle = Boolean(localStorageService.get('shuffleQ'));
 	$scope.shuffle = False;
 	
-	$scope.$watch('shuffle', function(value) {
-		localStorageService.set('shuffleQ', value);
-	});
+	//$scope.$watch('shuffle', function(value) {
+	//	localStorageService.set('shuffleQ', value);
+	//});
 	
 	awsService.getQueues();
 	
@@ -87,15 +87,15 @@ angular.module('awsSetup')
 	$scope.sendWork = function() {
 		var list = $scope.workList();
 		
-		if ($scope.shuffle) {
-			for (var i = list.length - 1; i >= 0; i--) {
-				var randomIndex = Math.floor(Math.random()*(i+1));
+		// if ($scope.shuffle) {
+		// 	for (var i = list.length - 1; i >= 0; i--) {
+		// 		var randomIndex = Math.floor(Math.random()*(i+1));
 				
-				var iItem = list[randomIndex];
-				list[randomIndex] = list[i];
-				list[i] = iItem;
-			}
-		}
+		// 		var iItem = list[randomIndex];
+		// 		list[randomIndex] = list[i];
+		// 		list[i] = iItem;
+		// 	}
+		// }
 		
 		awsService.sendToQueue($scope.queue.workQueue, list);
 	};
