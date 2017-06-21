@@ -6,12 +6,10 @@
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
-
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 -->
@@ -53,23 +51,23 @@
 		
 		<div class="form-inline">
 			<div class="form-group">
-				<label for="startFrame">First Object</label>
+				<label for="startFrame">Start Frame</label>
 				<input type="number" name="startFrame" class="form-control" id="startFrame" ng-model="startFrame" required min="0" max="{{endFrame}}" size="15"/>
 			</div>
 			
 			<div class="form-group">
-				<label for="endFrame">Last Object</label>
+				<label for="endFrame">End Frame</label>
 				<input type="number" name="endFrame" class="form-control" id="endFrame" ng-model="endFrame" required min="{{startFrame}}"/>
 			</div>
 		</div>
 		<div ng-messages="jobForm.startFrame.$error" role="alert">
-			<div ng-message="required">Start object is required</div>
-			<div ng-message="min">Start object must be greater than 0</div>
-			<div ng-message="max">Start object must be less than end object</div>
+			<div ng-message="required">Start frame is required</div>
+			<div ng-message="min">Start frame must be greater than 0</div>
+			<div ng-message="max">Start frame must be less than end frame</div>
 		</div>
 		<div ng-messages="jobForm.endFrame.$error" role="alert">
-			<div ng-message="required">End object is required</div>
-			<div ng-message="min">End object must be greater than start object</div>
+			<div ng-message="required">End frame is required</div>
+			<div ng-message="min">End frame must be greater than startFrame</div>
 		</div>
 		
 		<div class="form-group">
@@ -78,11 +76,12 @@
 		</div>
 		
 		<hr />
-		<div class="checkbox">		
- -	    	<label>		
- -	      		<input type="checkbox" ng-model="shuffle"> Shuffle (Will perform shuffle before sending to AWS)		
- -	      	</label>		
- -	  	</div>
+		
+		<div class="checkbox">
+	    	<label>
+	      		<input type="checkbox" ng-model="shuffle"> Shuffle (Will perform shuffle before sending to AWS)
+	      	</label>
+	  	</div>
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="form-inline">
