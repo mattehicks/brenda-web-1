@@ -1,7 +1,7 @@
 {
 	"amis": [
 		{
-			"ami": "ami-d14e66c7",
+			"ami": "ami-f94c67ef",
 			"blenderVersion": "2.78",
 			"nginxPath": "/usr/share/nginx/html/"
 		}
