@@ -143,7 +143,6 @@ angular.module('awsSetup')
 				'export BRENDA_WORK_DIR="."\n' +
 				'mkdir -p "$B"\n' +
 				'cd "$B"\n' +
-				'wget wget --cache=off http://bigdatasoup.com/blender/bakegroups.py --no-cache \n' +
 				'sudo cp /bakegroups.py /mnt/brenda/\n' +
 				'/usr/local/bin/brenda-node --daemon <<EOF\n' +
 				'AWS_ACCESS_KEY=' + awsService.getKeyId() + '\n' +
