@@ -144,12 +144,14 @@ angular.module('awsSetup')
 				'mkdir -p "$B"\n' +
 				'cd "$B"\n' +
 				'sudo cp /bakegroups.py /mnt/brenda/\n' +
+				'sudo cp /local_bg.py /mnt/brenda/\n' +
 				'/usr/local/bin/brenda-node --daemon <<EOF\n' +
 				'AWS_ACCESS_KEY=' + awsService.getKeyId() + '\n' +
 				'AWS_SECRET_KEY=' + awsService.getKeySecret() + '\n' +
 				'BLENDER_PROJECT=' + $scope.s3.projectSource + '\n' +
 				'WORK_QUEUE=sqs://' + $scope.queue.workQueue.split('/').pop() + '\n' +
 				'RENDER_OUTPUT=' + $scope.s3.frameDestination + '\n' +
+				'DONE=shutdown\n' +
 				'EOF\n';
 		
 		return script;
